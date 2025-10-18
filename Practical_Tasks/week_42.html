@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Layout Exercises — Box Model, Floats, Positioning, Flex & Grid</title>
+  <style>
+    :root{
+      --max-width:1100px;
+      --gap:16px;
+      --muted:#666;
+      --accent:#1768ac;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      line-height:1.45;
+    }
+    body{margin:0;background:#f7f7fb;color:#222;padding:20px;}
+    .page{max-width:var(--max-width);margin:0 auto}
+    h1{font-size:1.6rem;margin:8px 0 18px}
+    h2{margin-top:28px}
+    section.card{background:#fff;border-radius:8px;padding:18px;margin-bottom:22px;box-shadow:0 6px 18px rgba(20,20,40,0.04)}
+    p.lead{color:var(--muted);margin-top:0}
+    pre{background:#111;color:#fff;padding:12px;border-radius:6px;overflow:auto}
+
+    .box-model-demo{display:flex;gap:20px;flex-wrap:wrap}
+    .box{width:300px;color:#fff}
+    .box p{color:rgba(255,255,255,0.95);margin:0}
+
+    .box.a{background:#ef6c00;padding:20px;margin:8px;border:6px solid rgba(0,0,0,0.12)} 
+    .box.b{background:#2e7d32;padding:8px;margin:24px;border:4px dashed rgba(0,0,0,0.12)} 
+    .box.c{background:#1565c0;padding:30px;margin:12px;border:3px dotted rgba(255,255,255,0.6)} 
+
+    .box p{background:rgba(0,0,0,0.08);padding:6px;border-radius:4px}
+
+    .float-wrap{background:#fff;padding:18px;border-radius:8px;margin-top:6px}
+    .sidebar-right{width:300px;float:right;background:#ffe082;padding:14px;border-radius:6px;border:1px solid #f0c36d}
+    .main-content{overflow:hidden}
+    .float-wrap img.f-left{float:left;margin:0 16px 12px 0;max-width:40%;width:220px}
+    .float-wrap img.f-right{float:right;margin:0 0 12px 16px;max-width:40%;width:220px}
+    .float-wrap .clearfix{clear:both}
+    footer.float-footer{clear:both;padding:12px 14px;margin-top:12px;background:#eee;border-radius:6px;text-align:center}
+
+    .float-wrap p{margin:0 0 12px}
+
+    .pos-demo{position:relative;background:#fff;padding:18px;border-radius:8px;margin-top:16px}
+    .fixed-nav{position:fixed;top:0;left:0;right:0;background:#263238;color:#fff;padding:10px 16px;z-index:40}
+    .fixed-nav nav{max-width:var(--max-width);margin:0 auto;display:flex;gap:12px;align-items:center}
+
+    .pos-container{position:relative;height:280px;background:linear-gradient(135deg,#fff3e0,#e3f2fd);border-radius:8px;padding:12px;margin-top:10px}
+    .pos-absolute{position:absolute;right:12px;top:12px;background:#d32f2f;color:#fff;padding:8px;border-radius:6px}
+    .pos-relative{position:relative;left:18px;top:20px;background:#ffb300;padding:8px;border-radius:6px}
+    .pos-static{background:#fff;padding:8px;border-radius:6px;border:1px solid rgba(0,0,0,0.06);display:inline-block}
+
+    .spacer{height:520px} 
+
+    .gallery{display:flex;flex-wrap:wrap;gap:12px;background:#fff;padding:18px;border-radius:8px}
+    .gallery .item{flex:1 1 200px;min-width:200px;height:160px;overflow:hidden;border-radius:8px}
+    .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}
+    .gallery img:hover{transform:scale(1.05)}
+
+    @media(min-width:900px){
+      .gallery .item{flex-basis:calc((100% - 3 * 12px)/4)} 
+      .gallery .item{height:180px}
+    }
+    @media(min-width:600px) and (max-width:899px){
+      .gallery .item{flex-basis:calc((100% - 2 * 12px)/3)}
+    }
+    @media(max-width:599px){
+      .gallery .item{flex-basis:calc((100% - 1 * 12px)/2)} 
+    }
+
+    .grid-page{display:grid;grid-template-columns:220px 1fr 220px;grid-template-rows:auto 1fr auto;grid-template-areas:
+      "header header header"
+      "sidebar main aside"
+      "footer footer footer";
+      gap:12px;background:#fff;padding:18px;border-radius:8px}
+    .g-header{grid-area:header;padding:12px;background:#1768ac;color:#fff;border-radius:6px}
+    .g-sidebar{grid-area:sidebar;background:#e8f5e9;padding:12px;border-radius:6px}
+    .g-main{grid-area:main;padding:12px}
+    .g-aside{grid-area:aside;background:#fff8e1;padding:12px;border-radius:6px}
+    .g-footer{grid-area:footer;padding:10px;background:#eceff1;border-radius:6px;text-align:center}
+
+    @media(max-width:800px){
+      .grid-page{grid-template-columns:1fr;grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "aside"
+        "footer"}
+    }
+
+    .center-demo{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:10px}
+    .center-box{background:#fff;padding:18px;border-radius:8px;min-height:120px;border:2px dashed rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center}
+
+    .method-margin .inner{width:300px;margin:0 auto;border:1px solid #ddd;padding:10px}
+    .method-flex{display:flex;align-items:center;justify-content:center}
+    .method-grid{display:grid;place-items:center}
+    .method-text{text-align:center}
+
+    @media(max-width:700px){.center-demo{grid-template-columns:1fr}}
+
+  
+    .label{font-family:monospace;background:#111;color:#fff;padding:4px 8px;border-radius:4px;font-size:.85rem}
+  </style>
+</head>
+<body>
+ 
+  <div class="fixed-nav">
+    <nav>
+      <div class="label">Fixed Nav</div>
+      <div style="flex:1"></div>
+      <div style="opacity:.9">Positioning demo (nav is fixed at top)</div>
+    </nav>
+  </div>
+
+  <div style="height:52px"></div>
+
+  <main class="page">
+    <h1>CSS Layout Exercises — All Tasks in one page</h1>
+    <p class="lead">This single file includes implementations for: Box model, Float-based layout, Positioning, Flexbox gallery, CSS Grid layout, and Centering techniques. Inspect the code to learn how each effect was achieved.</p>
+
+
+    <section class="card">
+      <h2>Task 1 — Box Model</h2>
+      <div class="box-model-demo">
+        <div class="box a">
+          <p><strong>Box A</strong><br>width: 300px; padding: 20px; margin: 8px; border: 6px solid (solid). This box demonstrates how padding increases the inner spacing and margin separates boxes from others.</p>
+        </div>
+
+        <div class="box b">
+          <p><strong>Box B</strong><br>width: 300px; padding: 8px; margin: 24px; border: 4px dashed (dashed). This box shows large margins and a dashed border style.</p>
+        </div>
+
+        <div class="box c">
+          <p><strong>Box C</strong><br>width: 300px; padding: 30px; margin: 12px; border: 3px dotted (dotted). This box highlights bigger padding and a dotted border.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card float-wrap">
+      <h2>Task 2 — Float-based Layout</h2>
+      <div class="sidebar-right">
+        <h3>Sidebar (300px)</h3>
+        <p>This is a right-floated sidebar with its own background. It is 300px wide as requested.</p>
+      </div>
+
+      <div class="main-content">
+        <h3>Main content wrapping around sidebar</h3>
+        <p><img class="f-left" src="https://picsum.photos/seed/float-left/400/300" alt="float-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel eros et dui posuere luctus. Nulla facilisi. Curabitur gravida, augue in dictum gravida, lectus urna volutpat arcu, nec hendrerit lorem velit vitae purus.</p>
+        <p>Morbi laoreet, libero vitae accumsan ultricies, nibh magna tincidunt augue, id hendrerit turpis augue nec sapien. Praesent nec arcu nec ipsum volutpat posuere. <img class="f-right" src="https://picsum.photos/seed/float-right/400/300" alt="float-right">Sed at mi ligula. Proin a feugiat justo. Vestibulum euismod urna id nibh pharetra, eget faucibus lacus gravida.</p>
+
+        <p>Fusce convallis arcu sit amet ex vehicula, vitae dapibus urna ultricies. Integer vel nibh et nisl gravida pulvinar. Donec vel lacus vitae odio laoreet vulputate. This paragraph follows the floated images and has extra margin so text doesn't touch them.</p>
+
+        <div class="clearfix"></div>
+      </div>
+
+      <footer class="float-footer">Footer (clears floats)</footer>
+    </section>
+
+    <section class="card pos-demo">
+      <h2>Task 3 — Positioning (static, relative, absolute, fixed)</h2>
+      <p class="lead">The navigation bar at the top is <strong>fixed</strong>. Below is a container with <strong>position: relative</strong> and three elements demonstrating <em>absolute</em>, <em>relative</em> and <em>static</em>.</p>
+
+      <div class="pos-container">
+        <div class="pos-absolute">absolute (top-right)</div>
+        <div class="pos-relative">relative (moved from normal flow)</div>
+        <div class="pos-static">static (default flow)</div>
+      </div>
+
+      <div class="spacer">Scroll to see the fixed nav remain in place.</div>
+    </section>
+
+    
+    <section class="card">
+      <h2>Task 4 — Flexbox Gallery</h2>
+      <p class="lead">A responsive gallery using flexbox. Images keep the same height in a row (object-fit: cover) and scale slightly on hover.</p>
+
+      <div class="gallery" aria-label="Flexbox image gallery">
+      
+        <div class="item"><img src="https://picsum.photos/seed/1/600/400" alt="img1"></div>
+        <div class="item"><img src="https://picsum.photos/seed/2/600/400" alt="img2"></div>
+        <div class="item"><img src="https://picsum.photos/seed/3/600/400" alt="img3"></div>
+        <div class="item"><img src="https://picsum.photos/seed/4/600/400" alt="img4"></div>
+        <div class="item"><img src="https://picsum.photos/seed/5/600/400" alt="img5"></div>
+        <div class="item"><img src="https://picsum.photos/seed/6/600/400" alt="img6"></div>
+        <div class="item"><img src="https://picsum.photos/seed/7/600/400" alt="img7"></div>
+        <div class="item"><img src="https://picsum.photos/seed/8/600/400" alt="img8"></div>
+        <div class="item"><img src="https://picsum.photos/seed/9/600/400" alt="img9"></div>
+        <div class="item"><img src="https://picsum.photos/seed/10/600/400" alt="img10"></div>
+        <div class="item"><img src="https://picsum.photos/seed/11/600/400" alt="img11"></div>
+        <div class="item"><img src="https://picsum.photos/seed/12/600/400" alt="img12"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Task 5 — CSS Grid Layout System</h2>
+      <div class="grid-page">
+        <header class="g-header"><strong>Header — full width</strong></header>
+        <nav class="g-sidebar">
+          <h4>Sidebar (nav)</h4>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+        <main class="g-main">
+          <h3>Main content (wider)</h3>
+          <p>This main area is designed to be wider than the sidebars on desktop. On narrow screens the layout stacks vertically (responsive).</p>
+        </main>
+        <aside class="g-aside">
+          <h4>Secondary sidebar</h4>
+          <p>Ads / related content</p>
+        </aside>
+        <footer class="g-footer">Footer — spans full width</footer>
+      </div>
+    </section>
+
+    
+    <section class="card">
+      <h2>Task 6 — Centering challenge</h2>
+      <p class="lead">Four different methods to center content.</p>
+
+      <div class="center-demo">
+        <div class="center-box method-margin">
+          <div class="inner">Centered horizontally using <code>margin: 0 auto</code></div>
+        </div>
+
+        <div class="center-box method-flex">
+          <div class="inner">Centered with Flexbox (align-items & justify-content)</div>
+        </div>
+
+        <div class="center-box method-grid">
+          <div class="inner">Centered with CSS Grid (<code>place-items:center</code>)</div>
+        </div>
+
+        <div class="center-box method-text">
+          <div class="inner">Centered inline/text with <code>text-align:center</code></div>
+        </div>
+      </div>
+    </section>
+
+    <footer style="text-align:center;color:var(--muted);margin:28px 0 80px">End of exercises — enjoy experimenting!</footer>
+  </main>
+</body>
+</html>
