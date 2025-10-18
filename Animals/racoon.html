@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Racoon page</title>
+        <style>
+        body{
+            background-image: url(images/images.jpg);
+        }    
+        ul{
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            justify-content: space-around;
+        }
+        li{
+            display: inline-block;
+            margin-right: 0 10px;
+        }
+        a{
+            color: black;
+            text-decoration: none;        
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        nav{
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(233, 177, 93);
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        .banner{
+            padding: 5px;
+            font-size: 25px;
+        }
+        footer{
+            margin-bottom: 50px;
+        } 
+        .footer{
+            font-size: 30px;
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(233, 177, 93);
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        .header{
+            margin-top: 50px;
+        }
+        h1{
+            background-color: aliceblue;
+            border-radius: 10px;
+            border: 2px solid black;
+            margin: 80px 50px 50px 80px;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        /* Header */
+        .header h1 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            font-size: 2.8rem;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* Row and columns layout */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .leftcolumn, .middlecolumn, .rightcolumn {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        /* Column widths for desktop */
+        .leftcolumn {
+            flex: 2;
+            min-width: 250px;
+        }
+
+        .middlecolumn {
+            flex: 1.5;
+            min-width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rightcolumn {
+            flex: 1.5;
+            min-width: 250px;
+        }
+
+        /* Card styling */
+        .card h2 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .card h5 {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .card p, 
+        .card ul {
+            font-size: 1rem;
+        }
+
+        .card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .card ul h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Image styling */
+        .animal-img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .row {
+                flex-direction: column;
+            }
+
+            .leftcolumn, .middlecolumn, .rightcolumn {
+                min-width: 100%;
+            }
+
+            .animal-img {
+                max-width: 100%;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="../Hub.html">Home</a></li>
+                    <li><a href="../Practical_Tasks/Home.html">Practical</a></li>
+                    <li><a href="../Blog/main.html">Blog</a></li>
+                    <li><a href="Animals.html">Animals</a></li>
+                </ul>
+            </nav>    
+        </header>
+        <main>
+            <div class="header">
+                <h1><center>RACOON</center></h1>
+            </div>
+            <div class="row">
+                <div class="leftcolumn">
+                    <div class="card">
+                        <h2>About the Raccoon</h2>
+                        <h5>Adorable masked bandit of the wild</h5>
+                        <p>Raccoons are medium-sized mammals known for their distinctive black "mask" markings around their eyes and bushy, ringed tails. They are highly adaptable and can live in forests, urban areas, and anywhere with food sources.</p>
+                        <p>In some regions, raccoons are considered invasive and can impact local ecosystems and spread diseases.</p>
+                    </div>
+                </div>
+                <div class="middlecolumn">
+                    <div class="card">
+                        <img src="images/raccoon.jpg" alt="Raccoon" class="animal-img" />
+                    </div>
+                </div>
+                <div class="rightcolumn">
+                    <div class="card">
+                        <h2>Diet</h2>
+                        <ul>
+                            <li>Insects</li>
+                            <li>Fruits</li>
+                            <li>Small mammals</li>
+                            <li>Bird eggs</li>
+                            <li>Garbage scraps</li>
+                            <li>Crayfish</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li><a href="../About_Us.html">About us</a></li>
+                    <li><a href="../Hub.html">Home</a></li>
+                    <li><a href="../Pixel.html">Pixel</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

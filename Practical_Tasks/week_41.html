@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 41</title>
+        <style>
+        ul{
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            justify-content: space-around;
+        }
+        li{
+            display: inline-block;
+            margin-right: 0 10px;
+        }
+        a{
+            color: black;
+            text-decoration: none;        
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        nav{
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(158, 16, 16, 0.568);
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        .banner{
+            padding: 5px;
+            font-size: 20px;
+        }
+        footer{
+            margin-bottom: 50px;
+        } 
+        .footer{
+            font-size: 30px;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(158, 16, 16, 0.568);
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        .header{
+            margin-top: 50px;
+        }
+        h1{
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: aliceblue;
+            margin: 80px 50px 50px 80px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.5;
+            background: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4B2E83;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: lighter;
+            color: #666;
+            margin-bottom: 1em;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            background-color: #EEE8F4;
+            padding: 10px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: #4B2E83;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        .menu li a:hover {
+            background-color: #D1C4E9;
+        }
+
+        .menu li a:visited {
+            color: #6A1B9A;
+        }
+
+        .menu li a:active {
+            color: #C2185B;
+        }
+
+        .smallcaps {
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        #feature {
+            background-color: #FFF3E0;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .menu-section > ul {
+            background-color: #E0F2F1;
+            border: 1px solid #00897B;
+            padding: 10px;
+            list-style-type: square;
+        }
+
+        .menu-section li:nth-child(odd) {
+            background-color: #B2DFDB;
+        }
+
+        .menu-section li:nth-child(even) {
+            background-color: #80CBC4;
+        }
+
+        .menu-section li:first-child {
+            font-weight: bold;
+        }
+
+        .menu-section li:last-child {
+            font-style: italic;
+        }
+
+        .highlight {
+            background-color: #FFD54F;
+        }
+
+        .note {
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            font-size: 0.8em;
+            color: #999;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        h1 + p {
+            font-style: italic;
+            font-size: 1.1em;
+        }
+
+        div:hover p {
+            color: red;
+        }
+
+        input:focus {
+            border: 2px solid #4B2E83;
+            outline: none;
+        }
+
+        p {
+            color: blue;
+        }
+
+        .highlight p {
+            color: green;
+        }
+
+        #feature p {
+            color: red;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="banner">
+                    <ul>
+                        <li><a href="/Hub.html">Home</a></li>
+                        <li><a href="Home.html">Practical</a></li>
+                        <li><a href="/Blog/main.html">Blog</a></li>
+                        <li><a href="/Animals/Animals.html">Animals</a></li>
+                    </ul>
+                </div>
+            </nav>  
+        </header>
+        <main>
+            <div class="header">
+                <h1><center>WEEK 41</center></h1>
+            </div>
+            <div class="header"><center>
+                <h1>Selector Café</h1>
+                <h2>The perfect blend of code and coffee</h2>
+            </center></div>
+            <nav>
+                <ul class="menu smallcaps">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <section id="feature">
+            <p>Welcome to Selector Café, where every tag has a story and every cup tells a tale.</p>
+        </section>
+
+        <section class="menu-section">
+            <ul>
+                <li class="highlight">Espresso</li>
+                <li>Latte</li>
+                <li class="note">Iced Tea</li>
+                <li class="highlight note">Matcha</li>
+                <li>Cappuccino</li>
+            </ul>
+        </section>
+
+        <section>
+            <form>
+                <label for="email">Subscribe:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </form>
+        </section>
+    </main>
+        </main>
+        <footer>
+            <p>&copy; 2025 Selector Café. All rights reserved.</p>
+ 
+            <div class="footer">
+                <ul>
+                    <li><a href="../About_Us.html">About us</a></li>
+                    <li><a href="../Hub.html">Home</a></li>
+                    <li><a href="../Pixel.html">Pixel</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

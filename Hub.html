@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HUB</title>
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            body {
+                background: linear-gradient(to bottom right, #4ca8c4, #6b1dfd, #833ab4);
+            }
+            
+            nav {
+                background-color: rgb(200, 211, 211);
+            }
+            
+            .footer {
+                background-color: rgb(200, 211, 211);
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: space-between;
+            }
+            .container > a.box-link {
+                display: block;
+                width: calc(50% - 0.5rem);
+                text-decoration: none;
+            }
+            .container > a.box-link > div {
+                background-color: burlywood;
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                min-height: 220px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+                border-radius: 12px;
+                box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+                transition: transform 0.25s, box-shadow 0.25s;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-blend-mode: multiply;
+            }
+            .container > a.box-link:hover > div {
+                transform: translateY(-6px);
+                box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+            }
+
+            .container > a.box-link.box-practical > div { background-image: linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)), url('Practical_Tasks/images/background.jpg'); }
+            .container > a.box-link.box-blog > div { background-image: linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)), url('Blog/images/background.jpg'); }
+            .container > a.box-link.box-animals > div { background-image: linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)), url('Animals/images/background_deer.jpg'); }
+            .container > a.box-link.box-first > div { background-image: linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)), url('images/background_hub.jpeg'); }
+            .container > a.box-link.box-pixel > div { background-image: linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)), url('images/background_pixels.jpeg'); }
+            .container > a.box-link.box-js > div { background-image: linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)), url('images/background_about_us.jpg'); }
+
+            @media (max-width: 700px) {
+                .container > a.box-link { width: 100%; }
+                .container > a.box-link > div { min-height: 160px; }
+            }
+
+            h1 {
+                background-color: rgb(200, 211, 211);
+            }
+
+            .container a {
+                color: black;
+                text-decoration: none;
+                font-weight: bold;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            .container a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="Hub.html">Home</a></li>
+                    <li><a href="Practical_Tasks/Home.html">Practical</a></li>
+                    <li><a href="Blog/main.html">Blog</a></li>
+                    <li><a href="Animals/Animals.html">Animals</a></li>
+                </ul>
+            </nav>    
+        </header>
+        <main>
+            <div class="header">
+                <h1>THE HUB</h1>
+                <div class="intro-text" style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.7); border-radius: 8px; color: #333; font-size: 1.1em;">
+                    <strong>Disclaimer:</strong> the creator of these documents has major ADHD and constantly jumps in between projects, so not all is as pretty.
+                </div>
+            </div>
+            <section class="container">
+                <a href="Practical_Tasks/Home.html" class="box-link box-practical"><div>PRACTICAL TASKS</div></a>
+                <a href="Blog/main.html" class="box-link box-blog"><div>BLOG</div></a>
+            </section>
+            <section class="container">
+                <a href="Animals/Animals.html" class="box-link box-animals"><div>ANIMALS</div></a>
+                <a href="#" class="box-link box-first"><div>FIRST WEBSITE</div></a>
+            </section>
+            <section class="container">
+                <a href="Pixel.html" class="box-link box-pixel"><div>PIXELS</div></a>
+                <a href="#" class="box-link box-js"><div>JAVASCRIPT</div></a>
+            </section>
+        </main>
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li><a href="About_Us.html">About us</a></li>
+                    <li><a href="Hub.html">Home</a></li>
+                    <li><a href="Pixel.html">Pixel</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

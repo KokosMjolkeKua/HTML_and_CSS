@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 40</title>
+        <style>
+        ul{
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            justify-content: space-around;
+        }
+        li{
+            display: inline-block;
+            margin-right: 0 10px;
+        }
+        a{
+            color: black;
+            text-decoration: none;        
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        nav{
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(223, 111, 47);
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .banner{
+            padding: 5px;
+            font-size: 25px;
+        }
+        footer{
+            margin-bottom: 50px;
+        } 
+        .footer{
+            font-size: 30px;
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(223, 111, 47);
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .header{
+            margin-top: 50px;
+        }
+        h1{
+            border: 2px solid black;
+            background-color: aliceblue;
+            border-radius: 10px;
+            color: #222;
+            margin: 80px 50px 50px 80px;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #fcb045, #fd1d1d, #833ab4);
+            color: #fff;
+            text-align: center;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #244548;
+            border-radius: 10px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 0.5em;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.6em;
+            margin: 1em 0;
+        }
+
+        thead > tr {
+            background-color: #0e2528;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #1b3b3e;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-text {
+            padding: 30px 10px;
+            color: black;
+        }
+
+        .hero-text > p {
+            font-size: 1.2em;
+            color: #222;
+        }
+
+        .portrait {
+            width: 200px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .disclaimer {
+            font-weight: bold;
+            color: #ff0044;
+            text-transform: uppercase;
+            margin-top: 1em;
+        }
+
+        .story {
+            text-align: left;
+        }
+
+        .story h2 {
+            color: #ffffff;
+            border-bottom: 1px solid #888;
+            padding-bottom: 5px;
+        }
+
+        .story p {
+            color: #eee;
+        }
+
+        .painting-article {
+            margin-top: 20px;
+        }
+
+        .painting-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .painting-table, th, td {
+            border: 1px solid #aaa;
+            padding: 8px;
+            text-align: left;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="banner">
+                    <ul>
+                        <li><a href="/Hub.html">Home</a></li>
+                        <li><a href="Home.html">Practical</a></li>
+                        <li><a href="/Blog/main.html">Blog</a></li>
+                        <li><a href="/Animals/Animals.html">Animals</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="header">
+                <h1><center>WEEK 40</center></h1>
+            </div>
+            <section class="hero-text">
+                <h1>John Martin</h1>
+                <p>1789 - 1854</p>
+                <img class="portrait center" src="images/John_Martin_Portrait.jpg" alt="John Martin">
+                <p>The British Romanticist painter</p>
+                <p class="disclaimer">!!DISCLAIMER!!<br>
+                This text is not a valid research document, and is paraphrased from memory. Not fact checked.</p>
+            </section>
+
+            <article class="story">
+                <h2>Inspiration and themes</h2>
+                <p>[Your paragraph about Paradise Lost here]</p>
+                <img class="center" src="images/John_Martin_Le_Pandemonium_Louvre.JPG" alt="Pandemonium - John Martin, 1841" height="400px" width="700px">
+
+                <h2>Legacy</h2>
+                <p>[Legacy text here]</p>
+                <img class="center" src="images/John_Martin_Belshazzars_Feast.jpg" alt="Belshazzar's Feast - John Martin, 1820" height="400px" width="700px">
+            </article>
+
+            <article class="painting-article">
+                <h2>A selection of paintings</h2>
+                <p>A selection of John Martin’s work in no particular order</p>
+                <table class="painting-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pandemonium</td>
+                            <td>The capital of Hell</td>
+                            <td>1841</td>
+                        </tr>
+                        <tr>
+                            <td>Belshazzar's Feast</td>
+                            <td>The feast hosted by Belshazzar which prophets interpreted as dooming the Babylonian king</td>
+                            <td>1820</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </main>
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li><a href="../About_Us.html">About us</a></li>
+                    <li><a href="../Hub.html">Home</a></li>
+                    <li><a href="../Pixel.html">Pixel</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pixel Art Gallery</title>
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            body {
+                background: linear-gradient(to bottom right, #decfe2, #c01f1f, #7315ee);
+                color: white;
+                font-family: Arial, sans-serif;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                overflow-x: hidden;
+            }
+
+            nav, .footer {
+                background-color: rgb(190, 84, 173);
+                z-index: 100;
+            }
+
+            nav a, .footer a {
+                color: rgb(231, 227, 227);
+            }
+
+            h1 {
+                background-color: rgb(190, 84, 173);
+                color: aliceblue;
+                text-align: center;
+                padding: 1rem;
+                margin-bottom: 2rem;
+            }
+            .pixel-art-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                padding: 2rem;
+                margin-bottom: 100px;
+            }
+
+            .pixel-art {
+                background: rgba(255, 255, 255, 0.1);
+                padding: 1rem;
+                border-radius: 10px;
+                text-align: center;
+                transition: transform 0.3s ease;
+            }
+
+            .pixel-art:hover {
+                transform: scale(1.05);
+            }
+
+            .pixel-canvas {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(16, 1fr);
+                gap: 1px;
+                background: #333;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            .pixel {
+                width: 100%;
+                height: 0;
+                padding-bottom: 100%;
+                background: #fff;
+                transition: background-color 0.2s;
+                cursor: pointer;
+            }
+
+            .color-palette {
+                display: flex;
+                justify-content: center;
+                gap: 0.5rem;
+                margin: 1rem 0;
+            }
+
+            .color-option {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                cursor: pointer;
+                border: 2px solid #fff;
+                transition: transform 0.2s;
+            }
+
+            .color-option:hover {
+                transform: scale(1.2);
+            }
+
+            .moving-text {
+                font-size: 2rem;
+                font-weight: bold;
+                text-align: center;
+                margin: 2rem 0;
+                background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff);
+                background-size: 200% auto;
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+                animation: gradient 3s linear infinite;
+            }
+
+            @keyframes gradient {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+
+            .moving-letters-section {
+                margin: 3rem 0;
+                text-align: center;
+            }
+            .moving-letters-section h2 {
+                color: #fff;
+                margin-bottom: 1rem;
+                font-size: 2em;
+                letter-spacing: 0.05em;
+            }
+            #movingLetters {
+                font-size: 2.5rem;
+                font-weight: bold;
+                letter-spacing: 0.2em;
+                display: inline-block;
+                transition: transform 0.2s;
+            }
+
+            .wave-letters-section {
+                margin: 3rem 0;
+                text-align: center;
+            }
+            .wave-letters-section h2 {
+                color: #fff;
+                margin-bottom: 1rem;
+                font-size: 2em;
+                letter-spacing: 0.05em;
+            }
+            #waveLetters {
+                font-size: 2.5rem;
+                font-weight: bold;
+                letter-spacing: 0.2em;
+                display: flex;
+                justify-content: center;
+                gap: 0.2em;
+                transition: color 0.2s;
+            }
+            #waveLetters span {
+                display: inline-block;
+                transition: transform 0.2s, color 0.2s;
+            }
+
+            .instructions {
+                text-align: center;
+                margin: 2rem 0;
+                padding: 1rem;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+            }
+
+            @media (max-width: 768px) {
+                .pixel-art-container {
+                    grid-template-columns: 1fr;
+                }
+
+                .pixel-canvas {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+
+            /*Just testing a bunch of styles and see what works. most of this page is only used with the help of copilot and chatgpt
+            just to see what could possibly be done regarding pixels, and how to use objects that change on a webpage
+            
+            just fun and more of a testing ground*/
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="banner">
+                    <ul>
+                        <li><a href="Hub.html">Home</a></li>
+                        <li><a href="Practical_Tasks/Home.html">Practical</a></li>
+                        <li><a href="Blog/main.html">Blog</a></li>
+                        <li><a href="Animals/main.html">Animals</a></li>
+                    </ul>
+                </div>
+            </nav> 
+        </header>
+        <main>
+            <div class="header">
+                <h1><center>PIXELS</center></h1>
+            </div>
+
+            <div class="introtext" style="text-align:center; margin:2rem 0; padding:1rem; background:rgba(255,255,255,0.08); border-radius:10px; color:#fff; font-size:1.1em;">
+                Just testing a bunch of styles and see what works. Most of this page is only used with the help of Copilot and ChatGPT<br>
+                just to see what could possibly be done regarding pixels, and how to use objects that change on a webpage.<br>
+                Just fun and more of a testing ground.
+            </div>
+
+            <div class="moving-text">Create Your Pixel Art!</div>
+
+            <div class="instructions">
+                <p>Click on pixels to color them. Choose colors from the palette below.</p>
+            </div>
+
+            <div class="color-palette">
+                <div class="color-option" style="background-color: #ff0000" onclick="setCurrentColor('#ff0000')"></div>
+                <div class="color-option" style="background-color: #00ff00" onclick="setCurrentColor('#00ff00')"></div>
+                <div class="color-option" style="background-color: #0000ff" onclick="setCurrentColor('#0000ff')"></div>
+                <div class="color-option" style="background-color: #ffff00" onclick="setCurrentColor('#ffff00')"></div>
+                <div class="color-option" style="background-color: #ff00ff" onclick="setCurrentColor('#ff00ff')"></div>
+                <div class="color-option" style="background-color: #00ffff" onclick="setCurrentColor('#00ffff')"></div>
+                <div class="color-option" style="background-color: #ffffff" onclick="setCurrentColor('#ffffff')"></div>
+                <div class="color-option" style="background-color: #000000" onclick="setCurrentColor('#000000')"></div>
+            </div>
+
+            <div class="pixel-art-container">
+                <div class="pixel-art">
+                    <h3>Your Canvas</h3>
+                    <div class="pixel-canvas" id="mainCanvas"></div>
+                </div>
+
+                <div class="pixel-art">
+                    <h3>Example Art</h3>
+                    <img src="images/pixel-example.png" alt="Example pixel art" style="width: 200px; height: 200px; object-fit: contain;">
+                </div>
+            </div>
+
+            <script>
+                let currentColor = '#000000';
+
+                function setCurrentColor(color) {
+                    currentColor = color;
+                    document.querySelectorAll('.color-option').forEach(option => {
+                        option.style.transform = option.style.backgroundColor === color ? 'scale(1.2)' : 'scale(1)';
+                    });
+                }
+
+                function createCanvas() {
+                    const canvas = document.getElementById('mainCanvas');
+                    for (let i = 0; i < 256; i++) {
+                        const pixel = document.createElement('div');
+                        pixel.className = 'pixel';
+                        pixel.addEventListener('click', () => {
+                            pixel.style.backgroundColor = currentColor;
+                        });
+                        canvas.appendChild(pixel);
+                    }
+                }
+
+                window.onload = createCanvas;
+            </script>
+        </main>
+        <section class="moving-letters-section" style="margin: 3rem 0; text-align: center;">
+            <h2 style="color: #fff; margin-bottom: 1rem;">Animated Letters</h2>
+            <div id="movingLetters" style="font-size: 2.5rem; font-weight: bold; letter-spacing: 0.2em;">
+                P I X E L S
+            </div>
+            <script>
+                // Simple moving letters animation
+                const movingLetters = document.getElementById('movingLetters');
+                let direction = 1;
+                let pos = 0;
+                function animateLetters() {
+                    pos += direction;
+                    if (pos > 20 || pos < -20) direction *= -1;
+                    movingLetters.style.transform = `translateX(${pos}px)`;
+                    movingLetters.style.color = `hsl(${(pos*10)%360}, 80%, 60%)`;
+                    requestAnimationFrame(animateLetters);
+                }
+                animateLetters();
+            </script>
+        </section>
+        <section class="wave-letters-section" style="margin: 3rem 0; text-align: center;">
+            <h2 style="color: #fff; margin-bottom: 1rem;">Wave Animated Letters</h2>
+            <div id="waveLetters" style="font-size: 2.5rem; font-weight: bold; letter-spacing: 0.2em; display: flex; justify-content: center; gap: 0.2em;"></div>
+            <script>
+                // Wave animation for letters
+                const waveText = 'PIXEL WAVE';
+                const waveContainer = document.getElementById('waveLetters');
+                waveContainer.innerHTML = '';
+                for (let i = 0; i < waveText.length; i++) {
+                    const span = document.createElement('span');
+                    span.textContent = waveText[i] === ' ' ? '\u00A0' : waveText[i];
+                    waveContainer.appendChild(span);
+                }
+                function animateWave() {
+                    const time = Date.now() / 400;
+                    waveContainer.childNodes.forEach((span, i) => {
+                        span.style.transform = `translateY(${Math.sin(time + i * 0.5) * 18}px)`;
+                        span.style.color = `hsl(${(time * 60 + i * 30) % 360}, 80%, 60%)`;
+                    });
+                    requestAnimationFrame(animateWave);
+                }
+                animateWave();
+            </script>
+        </section>
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li><a href="About_Us.html">About us</a></li>
+                    <li><a href="Hub.html">Home</a></li>
+                    <li><a href="Pixel.html">Pixel</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
