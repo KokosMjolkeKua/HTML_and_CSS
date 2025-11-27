@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tables only</title>
+    <link href="../CSS/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="Block"></div>
+            <div class="Block-two"></div>
+            <div class="Block"></div>
+            <div class="Block-two"></div>
+        </nav>
+    </header>
+    <main>
+        <section class="online-table"> <!-- this is for everything else -->
+            <table>
+                <caption>
+                    A summary of the UK's most famous punk bands
+                </caption>
+                <thead>
+                <tr>
+                    <th scope="col">Band</th>
+                    <th scope="col">Year formed</th>
+                    <th scope="col">No. of Albums</th>
+                    <th scope="col">Most famous song</th>
+                </tr>
+                                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Buzzcocks</th>
+                    <td>1976</td>
+                    <td>9</td>
+                    <td>Ever fallen in love (with someone you shouldn't've)</td>
+                </tr>
+                <tr>
+                    <th scope="row">The Clash</th>
+                    <td>1976</td>
+                    <td>6</td>
+                    <td>London Calling</td>
+                </tr>
+                <tr>
+                    <th scope="row">The Damned</th>
+                    <td>1976</td>
+                    <td>10</td>
+                    <td>Smash it up</td>
+                </tr>
+                <tr>
+                    <th scope="row">Sex Pistols</th>
+                    <td>1975</td>
+                    <td>1</td>
+                    <td>Anarchy in the UK</td>
+                </tr>
+                <tr>
+                    <th scope="row">Sham 69</th>
+                    <td>1976</td>
+                    <td>13</td>
+                    <td>If The Kids Are United</td>
+                </tr>
+                <tr>
+                    <th scope="row">Siouxsie and the Banshees</th>
+                    <td>1976</td>
+                    <td>11</td>
+                    <td>Hong Kong Garden</td>
+                </tr>
+                <tr>
+                    <th scope="row">Stiff Little Fingers</th>
+                    <td>1977</td>
+                    <td>10</td>
+                    <td>Suspect Device</td>
+                </tr>
+                <tr>
+                    <th scope="row">The Stranglers</th>
+                    <td>1974</td>
+                    <td>17</td>
+                    <td>No More Heroes</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th scope="row" colspan="2">Total albums</th>
+                    <td colspan="2">77</td>
+                </tr>
+
+                <!-- colespan="2" for å spanne den over 2 linjer -->
+                </tfoot>
+            </table>
+        </section>
+        <article class="First-table"> <!-- contains mostly just text -->
+
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>Klasse</td>
+                            <td>Karakter</td>
+                            <td>Godkjent</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Trond</td>
+                            <td>Diskret Matte</td>
+                            <td>A</td>
+                            <td>Ja</td>
+                        </tr>
+                        <tr>
+                            <td>Matilde</td>
+                            <td>Diskret Matte</td>
+                            <td>E</td>
+                            <td>Ja</td>
+                        </tr>
+                        <tr>
+                            <td>Irene</td>
+                            <td>Programmering</td>
+                            <td>B</td>
+                            <td>Ja</td>
+                        </tr>
+                        <tr>
+                            <td>Oskar</td>
+                            <td>Web-programmering</td>
+                            <td>F</td>
+                            <td>Nei</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Antall:</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>3</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </article>
+        <article class="Second-table">
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Potatoes</th>
+                            <th>Salad</th>
+                            <th>Nuts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Emma</td>
+                            <td>diced</td>
+                            <td>fried</td>
+                            <td>edible</td>
+                        </tr>
+                        <tr>
+                            <td>Tomas</td>
+                            <td>sliced</td>
+                            <td>boiled</td>
+                            <td>raw</td>
+                        </tr>
+                        <tr>
+                            <td>Robert</td>
+                            <td>boiled</td>
+                            <td>raw</td>
+                            <td>fried</td>
+                        </tr>
+                        <tr>
+                            <td>Vanessa</td>
+                            <td>chips</td>
+                            <td>broccoli</td>
+                            <td>squirrel</td>
+                        </tr>
+                        <tr>
+                            <td>Roger</td>
+                            <td>boiled</td>
+                            <td>sliced</td>
+                            <td>peanøt butter</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td colspan="2"><center>Finishing thoughts?</center></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </article>
+        <article class="Third-table">
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th colspan="2">First and Last-name:</th>
+                            <th>Study:</th>
+                            <th>Bachelor:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ms</td>
+                            <td>Judy</td>
+                            <td>Dench</td>
+                            <td>IT</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Mr</td>
+                            <td>Roger</td>
+                            <td>Moore</td>
+                            <td>Computer Technology</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Mr</td>
+                            <td>Sean</td>
+                            <td>Connery</td>
+                            <td>IT</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Mrs</td>
+                            <td>Ursula</td>
+                            <td>Adressa</td>
+                            <td>IT</td>
+                            <td>Yes</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th colspan="3">Final Thoughts; anyone?</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+        </article>
+        <article class="Forth-table">
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Programs:</th>
+                            <th>Music:</th>
+                            <th>Movies:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Turbo</td>
+                            <td>Python</td>
+                            <td>Dirty Loops</td>
+                            <td>Jaws</td>
+                        </tr>
+                        <tr>
+                            <td>Mathilda</td>
+                            <td>Java</td>
+                            <td>Babymetal</td>
+                            <td>Saw</td>
+                        </tr>
+                        <tr>
+                            <td>Lorris</td>
+                            <td>JavaScript</td>
+                            <td>Djo</td>
+                            <td>Indiana Jones</td>
+                        </tr>
+                        <tr>
+                            <td>Zoe</td>
+                            <td>Python</td>
+                            <td>BloodyWood</td>
+                            <td>Barbie</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="4">END LINE</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </article>
+        <aside><!-- has to be after all, after article, section etc -->
+
+        </aside>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

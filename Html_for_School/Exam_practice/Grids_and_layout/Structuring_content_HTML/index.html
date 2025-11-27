@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>html-tester</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <style>
+            body{
+                margin: 2rem;
+                background-color: #006280;
+                color: white;
+            }
+            header{
+                border: solid white 3px;
+                margin-top: 1.2rem;
+                ul{
+                    background-color: #7a7abf;
+                    list-style: none;
+                    display: flex;
+                    margin-left: 0.1rem;
+                    color: white;
+                    border-radius: 10px;
+                    justify-content: center;
+                    li{
+                        padding-left: 2rem;
+                        padding-right: 2rem;
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+                        display: block;
+                        text-align: center;
+                        a{
+                            color: white;
+                            font-size: 25px;
+                            text-decoration: none;
+                        }
+                    }
+                    li:hover{
+                        background-color: white;
+                        a{
+                            color:black;
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+            }
+            main{
+                border: solid white 5px;
+                background-color: #b8b8ea;
+                padding: 1rem;
+                margin-top: 1.2rem;
+                color: black;
+            }
+
+
+
+            .article-one{
+                border: solid white 2rem;
+                margin-top: 2rem;
+                padding: 1rem;
+            }
+            .article-two{
+                border: solid white 2rem;
+                margin-top: 2rem;
+                padding: 1rem;
+            }
+            .article-three{
+                border: solid white 2rem;
+                margin-top: 2rem;
+                padding: 1rem;
+                .test-basics{
+                    h2{
+                        color: purple;
+                    }
+                    h3{
+                        color:purple;
+                    }
+
+                    div{
+                        color: grey;
+                    }
+
+                    ul{
+                        border:solid orange 1px;
+                    }
+                    ol{
+                        border: solid purple 1px;
+                    }
+                }
+            }
+
+            .test-folder{
+                border: solid white 2rem;
+                margin-top: 2rem;
+                padding: 1rem;
+
+            }
+
+            .tables{
+                display: flex;
+                justify-content: center;
+
+                padding: 0.2rem;
+                /*border: solid black 2px;*/
+                margin-bottom: 2rem;
+                tbody{
+                    margin: 1rem;
+                    padding: 0.2rem;
+                    background-color: #e8dbdb;
+                    td{
+                        padding: 0.2rem;
+                        border: dashed black 1px;
+                    }
+                }
+                thead{
+                    background-color: grey;
+                    td{
+                        border: solid black 1px;
+                    }
+                }
+
+            }
+
+            .tables-two{
+
+                thead{
+                    td, tr {
+                        border: solid black;
+                        background-color: grey;
+                    }
+                }
+                tbody{
+                    td, tr{
+                        border: solid black;
+                        tbody:nth-child (even) {
+                            background-color: #a0a0dc;
+                        }
+                        tbody:nth-child (odd){
+                            background-color: #ec6a6a;
+                        }
+                    }
+
+                }
+            }
+
+            footer{
+                border: solid white 4px;
+                background-color: #008069;
+                padding: 1rem;
+                margin-top: 1.2rem;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="Structuring_content_HTML/index.html" target="_blank">Hovedside</a></li>
+                    <li><a href="www.google.com" target="_blank">Lister</a></li>
+                    <li><a href="#" target="_blank">Tabeller</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article class="article-one">
+                <h1>My Test Webpage for all html stuff</h1>
+                <p>can also put p(which is text, inbetween the h1s, only one h1, per document btw!</p>
+
+                <h2>That was h1, and this is h2</h2>
+                <p>yeet yeet yeet </p>
+
+                <h3>h3 also exists</h3>
+                <p>my grumoy cat, hey hey</p>
+
+                <!--examples of why we need UTF-8, and why its important to make sure all
+                signs are able to be used-->
+                <h2>Text and letters important</h2>
+                <p><div>Allsymbols should be able to work: </div>
+                <div>Japanese example: ご飯が熱い</div>
+                <div>Japanese example: ご飯が熱い</div></p>
+
+                <p> My cat is very grumpy
+                    <div>My cat is very grumpy</div>
+                    <div>My cat is very grumpy</div>
+                    <div>My cat is very grumpy</div>
+                </p>
+                <p>My cat is very grumpy</p>
+
+                <img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"
+                alt="Firefox icon" /></img>
+
+                <dl><!--these add a linje title, using the dt(linje-tema), then you can add the dd,
+                which adds text under and onto the right side so it looks nice. lol-->
+                    <dt>Linjeheader:</dt>
+                    <dd>linjetextlinjetextlinjetext</dd>
+                    <dd>linjetextlinjetextlinjetext</dd>
+                    <dd>linjetextlinjetextlinjetext</dd>
+                </dl>
+
+                <!--input boxes that can either be disabled and be put next to eachother
+                or just works as is, not sure how to store info yet but will figure out?-->
+                <p><input type="text"/></p>
+                <p><input type="text" disabled="disabled"/></p>
+                <p><input type="text"/></p>
+
+                <p> </p>
+
+                <!--this is how to make a link, which we know but also to add so only
+                the text is the clickable part-->
+                <p><a href="https://www.google.com/">The Google Homepage > The Best Website</a></p>
+                <p><a href="https://www.mozilla.org/">The Mozilla homepage > favorite website (not)</a></p>
+
+                <!--this is to show that the whitespace between the the elements can escape, but
+                because of missing css it doesnt work, lol-->
+                <p id="noWhitespace">Dogs are silly.</p>
+                <p id="noWhitespace">Dogs are silly.</p>
+                <p>Dogs are silly.</p>
+                <p id="whitespace">Dogs
+                    are
+                    silly.</p>
+
+                <!--this is to show that some squiggles has meaning and even using them inside of text
+                changes the meaning of the elements-->
+                <p>In HTML, you define a paragraph using the <p> element.</p>
+                <p>In HTML, you define a paragraph using the &lt;p&gt; element.</p>
+
+                <p>I'm not inside a comment</p>
+                <!-- <p>I am!</p> -->
+            </article>
+
+            <article class="article-two">
+                <!-- testing out the span ability -->
+                <span style="font-size: 32px; margin: 21px 0; display: block;">
+                  Is this a top level heading?
+                </span>
+
+                <!-- testing out the different highlights etc for texts: -->
+                <p>I am <strong>glad</strong> you werent late</p>
+                <p>I am glad <em>you</em> werent late</p>
+                <p>I am <i>glad</i> you <i>werent</i> late!</p>
+                <p><big>I am glad you werent late</big></p>
+                <p>I am glad <b>you werent</b> late</p>
+                <p>I am <em>glad</em> you weren't <em>late</em>.</p>
+
+                <p>This liquid is <strong>highly toxic</strong> —
+                    if you drink it, <strong>you may <em>die</em></strong>.</p>
+
+                <h2><em>Emphasis</em> and <strong>importance</strong></h2>
+                <p>
+                    My new coffee machine is called <strong>The Percolator 2000</strong>. It produces the most
+                    sublime and wonderful brew.
+                </p>
+
+                <p>
+                    In the <em>dead</em> of winter, it will be cold. You should wrap up warm to avoid
+                    falling <em>ill</em>.
+                </p>
+
+                <h2>Italics, Bold and Underline</h2>
+                <p><i> is used to convey a meaning traditionally conveyed by italic: foreign words, taxonomic designation, technical terms, a thought…</i></p>
+                <p><b> is used to convey a meaning traditionally conveyed by bold: keywords, product names, lead sentence…</b></p>
+                <p><b> is used to convey a meaning traditionally conveyed by bold: keywords, product names, lead sentence…</b></p>
+                <p><u> is used to convey a meaning traditionally conveyed by underline: proper name, misspelling…</u></p>
+
+
+                <!-- Litt extra info etc; -->
+                <!-- scientific names -->
+                <p>
+                    The Ruby-throated Hummingbird (<i>Archilochus colubris</i>) is the most common
+                    hummingbird in Eastern North America.
+                </p>
+
+                <!-- foreign words -->
+                <p>
+                    The menu was a sea of exotic words like <i lang="uk-latn">vatrushka</i>,
+                    <i lang="id">nasi goreng</i> and <i lang="fr">soupe à l'oignon</i>.
+                </p>
+
+                <!-- a known misspelling -->
+                <p>Someday I'll learn how to <u class="spelling-error">spel</u> better.</p>
+
+                <!-- term being defined when used in a definition -->
+                <dl>
+                    <dt>Semantic HTML</dt>
+                    <dd>
+                        Use the elements based on their <b>semantic</b> meaning, not their
+                        appearance.
+                    </dd>
+                </dl>
+            </article>
+
+            <article class="article-three">
+                <!-- LISTS -->
+                <ul><u> An Unordered List:</u>
+                    <li>Milk</li>
+                    <li>Egg</li>
+                    <li>Flour</li>
+                    <li>ETC..</li>
+                </ul>
+                <ol><u> An Ordered List:</u>
+                    <li>Milkyway</li>
+                    <li>Freya</li>
+                    <li>Kit-Kat</li>
+                    <li>ETC..</li>
+                </ol>
+
+
+                <!-- Example of a list making sense-->
+                <h2>Quick hummus recipe</h2>
+                <p><div>This recipe makes quick, tasty hummus, with no messing. It has been adapted from </div>
+                <div>a number of different recipes that I have read over the years.</div></p>
+
+                <p><div>Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes.</div>
+                 <div>It is a very tasty with salad, grilled meats and pitta breads.</div></p>
+
+                <ul>Ingredients
+                    <li>1 can (400g) of chick peas (garbanzo beans)</li>
+                    <li>175g of tahini</li>
+                    <li>6 sundried tomatoes</li>
+                    <li>Half a red pepper</li>
+                    <li>A pinch of cayenne pepper</li>
+                    <li>1 clove of garlic</li>
+                    <li>A dash of olive oil</li>
+                </ul>
+
+                <ol> Instructions
+                    <li>Remove the skin from the garlic, and chop coarsely</li>
+                    <li>Remove all the seeds and stalk from the pepper, and chop coarsely</li>
+                    <li>Add all the ingredients into a food processor</li>
+                    <li>Process all the ingredients into a paste</li>
+                    <li>If you want a coarse "chunky" hummus, process it for a short time</li>
+                    <li>If you want a smooth hummus, process it for a longer time</li>
+                </ol>
+
+                <p><div>For a different flavor, you could try blending in a small measure of lemon and coriander,</div>
+                <div>chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment </div>
+                <div>and see what works for you.</div></p>
+
+                <p><u>Storage</u></p>
+                <p><div>Refrigerate the finished hummus in a sealed container. You should be able to use it for about</div>
+                <div>a week after you've made it. If it starts to become fizzy, you should definitely discard it.</div></p>
+
+                <p>Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</p>
+
+                <!-- MORE USE OF the dd, dt, dl etc -->
+                <dl>
+                    <dt>soliloquy</dt>
+                    <dd>
+                        In drama, where a character speaks to themselves, representing their inner
+                        thoughts or feelings and in the process relaying them to the audience (but
+                        not to other characters.)
+                    </dd>
+                    <dt>monologue</dt>
+                    <dd>
+                        In drama, where a character speaks their thoughts out loud to share them
+                        with the audience and any other characters present.
+                    </dd>
+                    <dt>aside</dt>
+                    <dd>
+                        In drama, where a character shares a comment only with the audience for
+                        humorous or dramatic effect. This is usually a feeling, thought, or piece of
+                        additional background information.
+                    </dd>
+                </dl>
+
+                <section class="test-basics">
+                    <h2>Basic HTML Animals</h2>
+                    <div>This is the first paragraph in our page. It introduces our animals.</div>
+
+                    <h3>The Llama</h3>
+                    <div>Our Llama is a big fan of list items. When she spies a patch of them on a web page,</div>
+                    <div> she will eat them like sweets, licking her lips as she goes.</div>
+
+                    <h3>The Anaconda</h3>
+                    <div>The crafty anaconda likes to slither around the page, traveling rapidly by way</div>
+                    <div> of anchors to sneak up on his prey.</div>
+
+                    <h4><strong>Looking at lists</strong></h4>
+                    <p>Turn the following list of my favorite vegetables into an unordered list.</p>
+                    <ul>
+                        <li>Cucumber</li>
+                        <li>Broccoli</li>
+                        <li>Asparagus</li>
+                        <li>Pepper</li>
+                    </ul>
+
+                    <p>Turn the following directions into an ordered list.</p>
+                    <ol>
+                        <li>First knock on the door</li>
+                        <li>When prompted, say the magic word</li>
+                        <li>Wait for at least 5 seconds</li>
+                        <li>Turn the handle and push</li>
+                    </ol>
+
+
+                    <h2>Advanced HTML Animals</h2>
+                    <dl>
+                        <dt>Llama</dt>
+                        <dd>Tall, woolly quadruped, pointy ears. Sometimes rideable, but grumpy and spits a lot. Big fan of list items.</dd>
+
+                        <dt>Anaconda</dt>
+                        <dd>A very large constrictor snake; travels rapidly by way of anchors to sneak up on his prey.</dd>
+
+                        <dt>Hippopotamus</dt>
+                        <dd>His description is bottomless.</dd>
+                    </dl>
+                </section>
+            </article>
+
+            <article class="test-folder">
+                <section class="test-one">
+                    <h1>Information on Whales</h1>
+
+                    <p>
+                        For more information on our conservation activities and which Whales we study,
+                        see our <a target="_blank" href="whales.html" title="Includes information on Blue Whales and Sperm Whales">Whales page</a>.
+                    </p>
+                    <p>
+                        If you want to ask our team more questions, feel free to
+                        <a target="_blank" href="mailto:whales@examples.com" title="Question about Whales">email us</a>.
+                    </p>
+                </section>
+                <section class="test-two">
+                    <h1>List path tests</h1>
+
+                    <ul>
+                        <li><a target="_blank" href="whales.html" title="Link to blue whale page">Link me to the blue whale image</a></li>
+                        <li><a target="_blank" href="narwhal/narwhal.jpg">Link me to the narwhal image</a></li>
+                        <li><a target="_blank" href="https://images.google.com/" title="google-images">Link me to Google image search</a></li>
+                        <li><a href="#bottom" title="bottom of this test">Link me to the paragraph at the bottom of the page</a></li>
+                    </ul>
+
+                    <div></div>
+
+                    <p id="bottom">The bottom of the page!</p>
+                </section>
+                <section class="test-three">
+                    <p>
+                        We do lots of work with Narwhals. <a href="narwhals.html" target="_blank">Find out more about this work</a>.
+                    </p>
+
+                    <p>
+                        You can <a href="mailto:whales@example.com">email our support team</a> if you have any more questions.
+                    </p>
+
+                    <p>
+                        You can also <a href="factfile.pdf" target="_blank">download
+                        our factfile</a> (PDF, 4MB), which contains lots more information, including an FAQ.
+                    </p>
+                </section>
+            </article>
+
+            <article class="test-folder">
+                <section class="test-one">
+                    <h1>Basic image embed</h1>
+                    <img src="https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images/blueberries.jpg?raw=true"
+                         alt="picture of blueberries" style="width: 615px; height: 419px;" title="blueberry picture" />
+                    <!-- a tooltip is a title to anything, so that if you hover over you get a small text -->
+
+                    <p>You should see a picture of some blueberries above.</p>
+                </section>
+                <section class="test-two">
+                    <h1>Basic image title</h1>
+
+                    <img
+                            src="https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/larch.jpg?raw=true"
+                            alt="Several tall evergreen trees called larches" style="width: 600px; height 400px;" title="forrest picture" />
+                </section>
+                <section class="test-three">
+                    <h1>Image and caption</h1>
+                    <figure>
+                        <img
+                                src="https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/firefox.png?raw=true"
+                                alt="An abstract flaming fox wrapping around a blue sphere"
+                                width="446"
+                                height="460" title="Firefox 2019 logo"/>
+                        <figcaption>Firefox emblem/The 2019 Firefox logo</figcaption>
+                    </figure>
+                </section>
+                <section class="test-three">
+                    <p>
+                        We do lots of work with Narwhals. <a href="narwhals.html" target="_blank">Find out more about this work</a>.
+                    </p>
+
+                    <p>
+                        You can <a href="mailto:whales@example.com">email our support team</a> if you have any more questions.
+                    </p>
+
+                    <p>
+                        You can also <a href="factfile.pdf" target="_blank">download
+                        our factfile</a> (PDF, 4MB), which contains lots more information, including an FAQ.
+                    </p>
+                </section>
+            </article>
+
+            <article class="test-folder">
+                <section class="tables">
+                    <!-- TABLES and how to use them -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Person</td>
+                                <td>Age</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tony</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>Ezekiel</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td>Ezekiel's mother</td>
+                                <td>54</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="tables-two">
+                    <table>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Knocky</td>
+                            <td>Flor</td>
+                            <td>Ella</td>
+                            <td>Juan</td>
+                        </tr>
+                        <tr>
+                            <td>Breed</td>
+                            <td>Jack Russell</td>
+                            <td>Poodle</td>
+                            <td>Streetdog</td>
+                            <td>Cocker Spaniel</td>
+                        </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td>16</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Owner</td>
+                            <td>Mother-in-law</td>
+                            <td>Me</td>
+                            <td>Me</td>
+                            <td>Sister-in-law</td>
+                        </tr>
+                        <tr>
+                            <td>Eating Habits</td>
+                            <td>Eats everyone's leftovers</td>
+                            <td>Nibbles at food</td>
+                            <td>Hearty eater</td>
+                            <td>Will eat till he explodes</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>Animals</th>
+                        </tr>
+                        <tr>
+                            <th>Hippopotamus</th>
+                        </tr>
+                        <tr>
+                            <th>Horse</th>
+                            <td>Mare</td>
+                        </tr>
+                        <tr>
+                            <td>Stallion</td>
+                        </tr>
+                        <tr>
+                            <th>Crocodile</th>
+                        </tr>
+                        <tr>
+                            <th>Chicken</th>
+                            <td>Hen</td>
+                        </tr>
+                        <tr>
+                            <td>Rooster</td>
+                        </tr>
+                    </table>
+                </section>
+            </article>
+            <article class="test-folder">
+                <section class="test-one">
+                    <form action="./submit_page" method="get">
+                        <h2>Subscribe to our newsletter</h2>
+                        <p>
+                            <label for="name">Name (required):</label>
+                            <input type="text" name="name" id="name" required />
+                        </p>
+                        <p>
+                            <label for="email">Email (required):</label>
+                            <input type="email" name="email" id="email" required />
+                        </p>
+                        <p>
+                            <button>Sign me up!</button>
+                        </p>
+                    </form>
+                </section>
+                <section class="test-two">
+                    <table>
+                        <caption>
+                            A summary of the UK's most famous punk bands
+                        </caption>
+                        <thead>
+                        <tr>
+                            <th scope="col">Band</th>
+                            <th scope="col">Year formed</th>
+                            <th scope="col">No. of Albums</th>
+                            <th scope="col">Most famous song</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Buzzcocks</th>
+                            <td>1976</td>
+                            <td>9</td>
+                            <td>Ever fallen in love (with someone you shouldn't've)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">The Clash</th>
+                            <td>1976</td>
+                            <td>6</td>
+                            <td>London Calling</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">The Damned</th>
+                            <td>1976</td>
+                            <td>10</td>
+                            <td>Smash it up</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sex Pistols</th>
+                            <td>1975</td>
+                            <td>1</td>
+                            <td>Anarchy in the UK</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sham 69</th>
+                            <td>1976</td>
+                            <td>13</td>
+                            <td>If The Kids Are United</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Siouxsie and the Banshees</th>
+                            <td>1976</td>
+                            <td>11</td>
+                            <td>Hong Kong Garden</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Stiff Little Fingers</th>
+                            <td>1977</td>
+                            <td>10</td>
+                            <td>Suspect Device</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">The Stranglers</th>
+                            <td>1974</td>
+                            <td>17</td>
+                            <td>No More Heroes</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <th scope="row" colspan="2">Total albums</th>
+                            <td colspan="2">77</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </section>
+                <section class="test-three">
+
+                </section>
+            </article>
+
+            <article class="test-folder">
+                <section class="test-one">
+
+                </section>
+                <section class="test-two">
+
+                </section>
+                <section class="test-three">
+
+                </section>
+            </article>
+
+            <article class="test-folder">
+                <section class="test-one">
+
+                </section>
+                <section class="test-two">
+
+                </section>
+                <section class="test-three">
+
+                </section>
+            </article>
+
+            <aside class="container">
+                <div class="circle"></div>
+                <div class="circle-two"></div>
+            </aside>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>

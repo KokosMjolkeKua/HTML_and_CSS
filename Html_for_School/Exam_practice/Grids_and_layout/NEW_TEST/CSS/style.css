@@ -1,0 +1,63 @@
+body{
+    margin-left:20px;
+    margin-right:20px;
+}
+
+header{
+    margin-top:15px;
+    margin-bottom:15px;
+    nav{
+        display: flex;
+        justify-content:center;
+        .box_one{
+            margin-left: 10px;
+            width:250px;
+            height:100px;
+            background-color: #ed7171;
+            border:1px solid #ed7171;
+        }
+        .box_two{
+            margin-left: 10px;
+            width:250px;
+            height:100px;
+            background-color: #f3758b;
+            border:1px solid #f3758b;
+        }
+        .box_three{
+            margin-left: 10px;
+            width:250px;
+            height:100px;
+            background-color: #ea359c;
+            border:1px solid #ea359c;
+        }
+        .box_one:hover{
+            background-color:white;
+            border:1px solid black;
+        }
+        .box_two:hover{
+            background-color:white;
+            border:1px solid black;
+        }
+        .box_three:hover{
+            background-color:white;
+            border:1px solid black;
+        }
+        a{
+            text-align:center;
+            line-height:99px;
+            font-size:2.2rem;
+            text-decoration:none;
+            color:black;
+        }
+    }
+}
+
+.picture{
+    display:flex;
+    justify-content:center;
+}
+
+flex-direction:row; /*på rekke og rad*/
+flex-direction:column; /*under hverandre*/
+border: top høyre bunn venstre (med klokka, starter på 12)
+
