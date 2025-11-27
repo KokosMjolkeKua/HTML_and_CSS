@@ -1,0 +1,8 @@
+section{
+    display:flex;
+    justify-content:center;
+    font-size:8rem;
+    text-align:center;
+    line-height:500px;
+    cursor:pointer;
+}

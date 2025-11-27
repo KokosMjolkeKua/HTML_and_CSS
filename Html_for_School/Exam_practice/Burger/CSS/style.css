@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color:rgb(130, 0, 40);
+    color:aliceblue;
+    line-height:1.4rem;
+    font-size:0.9em;
+
+}
+
+main{
+    margin-left: 2rem;
+    display:grid;
+    grid-template-columns:minmax(75%, 1fr) minmax(15%, 1fr);
+    article{
+        margin:1rem;
+        grid-column:1/2;
+    }
+    aside{
+        margin:1rem;
+        grid-column:2/2;
+    }
+}
+
+
+.ingress{
+    font-weight:700;
+    color: grey;
+}
+
+.secondbox{
+    background-image: url(https://student.oslomet.no/documents/585736/46552123/Str%C3%B8mbrudd+2400+x1200.jpg/70cb4090-8acd-07d6-ade6-bbb23903dbc2?t=1761917893078);
+    background-size:cover;
+    width:99%;
+    height:60vw;
+}
+
+aside{
+    background-color:rgb(240, 200, 120);
+    padding-left:1em;
+    padding-top:0.1em;
+    padding-bottom:0.25em;
+}
+
+aside > p{
+    font-family: Times New Roman, Times, serif;
+    font-style: oblique;
+    font-size:larger;
+}
+
+footer > div{
+    margin-left:2rem;
+    margin-bottom:0.4rem;
+    padding:0.4rem;
+    border-style: dashed;
+    font-size:smaller;
+}
+
+/*HAMBURGER-MENU*/
+
+#burger-toggle{display:none}
+
+@media (min-width:701px){
+    .menu{
+        display:flex;
+        justify-content:center;
+        flex-direction:row;
+        list-style-type:none;
+    }
+
+    .menu li{
+        padding-right:4rem
+    }
+    h1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight:500;
+        font-size:1.9rem;
+        display:flex;
+        float:right;
+    }
+}
+
+@media (max-width:700px){
+    .menu{
+        list-style-type:none;
+        position:sticky;
+        padding-left:0;
+    }
+    .menu-icon{
+        display:block;
+        background-image:url(../images/burger-two.png);
+        background-size:cover;
+        width:45px;
+        height:45px;
+    }
+    .menu li{
+        height:0;
+        overflow:hidden;
+    }
+
+    .hamburger-toggle-container{cursor:pointer;}
+
+    #burger-toggle:checked ~ .menu li{
+        height:1rem;
+        width:auto;
+        background-color:rgb(130, 0, 40);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 0.5rem;
+
+    }
+
+    nav{
+        display:flex;
+        height:40px;
+    }
+    h1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight:500;
+        font-size:1.9rem;
+        display:flex;
+        float:right;
+    }
+}
